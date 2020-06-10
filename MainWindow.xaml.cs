@@ -20,10 +20,47 @@ namespace Calculator
     /// </summary>
     public partial class MainWindow : Window
     {
+        double lastnumber, result;
         public MainWindow()
         {
             InitializeComponent();
             
+            acButton.Click += AcButton_Click;
+            negativeButton.Click += NegativeButton_Click;
+            percentageButton.Click += PercentageButton_Click;
+            equalToButton.Click += EqualToButton_Click;
+
+
+        }
+
+        private void EqualToButton_Click(object sender, RoutedEventArgs e)
+        {
+            
+        }
+
+        private void PercentageButton_Click(object sender, RoutedEventArgs e)
+        {
+            if (double.TryParse(resultLabel.Content.ToString(), out lastnumber))
+            {
+                lastnumber = lastnumber / 100;
+                resultLabel.Content = lastnumber.ToString();
+
+            }
+        }
+
+        private void NegativeButton_Click(object sender, RoutedEventArgs e)
+        {
+            if (double.TryParse(resultLabel.Content.ToString(), out lastnumber))
+            {
+                lastnumber = lastnumber * -1;
+                resultLabel.Content = lastnumber.ToString();
+
+            }
+        }
+
+        private void AcButton_Click(object sender, RoutedEventArgs e)
+        {
+            resultLabel.Content = "0";
         }
 
         private void sevenButton_Click(object sender, RoutedEventArgs e)
