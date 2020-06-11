@@ -1,7 +1,7 @@
 # Calculator
 - A simple calculator app using WPF (Windows Presentation Foundation).
 
---Have a look.
+                                                          ##Have a look.
 <p align="center">
   <img src="https://raw.githubusercontent.com/Psp29onetwo/Calculator/master/calc.png" width="350" title="hover text">
 </p>
