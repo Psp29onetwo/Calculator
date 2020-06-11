@@ -1,6 +1,5 @@
 # Calculator
 - A simple calculator app using WPF (Windows Presentation Foundation).
 <p align="center">
-  
-![alt text](https://raw.githubusercontent.com/Psp29onetwo/Calculator/master/calc.png)
+  <img src="https://raw.githubusercontent.com/Psp29onetwo/Calculator/master/calc.png" width="350" title="hover text">
 </p>
