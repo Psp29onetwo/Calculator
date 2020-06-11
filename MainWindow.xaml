@@ -6,7 +6,7 @@
         xmlns:local="clr-namespace:Calculator"
         mc:Ignorable="d"
         Title="MainWindow" Height="525" Width="350">
-    <Grid Margin="10">
+    <Grid Margin="10,11,10,9" Background="SlateGray">
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="*"/>
             <ColumnDefinition Width="*"/>
@@ -27,11 +27,12 @@
                VerticalAlignment="Bottom"
                FontSize="60"
                Grid.ColumnSpan="4"
+               Foreground="White"
                />
         <Button Content="AC"
                 x:Name="acButton"
                 Grid.Row="1"
-                Background="Black"
+                Background="OrangeRed"
                 Foreground="White"
                 FontSize="25"
                 Margin="1"
@@ -55,13 +56,14 @@
                 Margin="1"
                 />
         <Button Content="/"
+                Click="operationButton_Click"
                 x:Name="divisionButton"
                 Grid.Row="1"
                 Grid.Column="3"
                 Background="Black"
                 Foreground="White"
                 FontSize="25"
-                Margin="1"
+                Margin="1,1,1,0" Height="66" VerticalAlignment="Top"
                 />
         <Button Content="7"
                 x:Name="sevenButton"
@@ -70,10 +72,11 @@
                 Foreground="White"
                 FontSize="25"
                 Margin="1" 
-                Click="sevenButton_Click"
+                Click="numberButton_Click"
                 />
         <Button Content="8"
-                x:Name="eightButton"
+                x:Name="eightButton" 
+                Click="numberButton_Click"
                 Grid.Row="2"
                 Grid.Column="1"
                 Background="Black"
@@ -82,7 +85,8 @@
                 Margin="1"
                 />
         <Button Content="9"
-                x:Name="nineButton"
+                x:Name="nineButton" 
+                Click="numberButton_Click"
                 Grid.Row="2"
                 Grid.Column="2"
                 Background="Black"
@@ -91,6 +95,7 @@
                 Margin="1"
                 />
         <Button Content="*"
+                Click="operationButton_Click"
                 x:Name="multiplyButton"
                 Grid.Row="2"
                 Grid.Column="3"
@@ -100,7 +105,8 @@
                 Margin="1"
                 />
         <Button Content="4"
-                x:Name="fourButton"
+                x:Name="fourButton" 
+                Click="numberButton_Click"
                 Grid.Row="3"
                 Background="Black"
                 Foreground="White"
@@ -108,7 +114,8 @@
                 Margin="1"
                 />
         <Button Content="5"
-                x:Name="fiveButton"
+                x:Name="fiveButton" 
+                Click="numberButton_Click"
                 Grid.Row="3"
                 Grid.Column="1"
                 Background="Black"
@@ -117,7 +124,8 @@
                 Margin="1"
                 />
         <Button Content="6"
-                x:Name="sixButton"
+                x:Name="sixButton" 
+                Click="numberButton_Click"
                 Grid.Row="3"
                 Grid.Column="2"
                 Background="Black"
@@ -126,6 +134,7 @@
                 Margin="1"
                 />
         <Button Content="-"
+                Click="operationButton_Click"
                 x:Name="subtractButton"
                 Grid.Row="3"
                 Grid.Column="4"
@@ -134,7 +143,8 @@
                 FontSize="25"
                 Margin="1"
                 />
-        <Button Content="1"
+        <Button Content="1" 
+                Click="numberButton_Click"
                 Grid.Row="4"
                 x:Name="oneButton"
                 Background="Black"
@@ -142,7 +152,8 @@
                 FontSize="25"
                 Margin="1"
                 />
-        <Button Content="2"
+        <Button Content="2" 
+                Click="numberButton_Click"
                 x:Name="twoButton"
                 Grid.Row="4"
                 Grid.Column="1"
@@ -151,7 +162,8 @@
                 FontSize="25"
                 Margin="1"
                 />
-        <Button Content="3"
+        <Button Content="3" 
+                Click="numberButton_Click"
                 x:Name="threeButton"
                 Grid.Row="4"
                 Grid.Column="2"
@@ -163,6 +175,7 @@
 
         <Button Content="+"
                 x:Name="additionButton"
+                Click="operationButton_Click"
                 Grid.Row="4"
                 Grid.Column="3"
                 Background="Black"
@@ -170,7 +183,8 @@
                 FontSize="25"
                 Margin="1"
                 />
-            <Button Content="0"
+        <Button Content="0" 
+                Click="numberButton_Click"
                 x:Name="zeroButton"
                 Grid.Row="5"
                 Grid.ColumnSpan="2"
@@ -180,6 +194,7 @@
                     Margin="1"
                 />
             <Button Content="."
+                Click="decimalPointButton_Click"
                 x:Name="decimalPointButton"
                 Grid.Row="5"
                 Grid.Column="2"
@@ -193,7 +208,7 @@
                 Grid.Row="5"
                 Margin="1"
                 Grid.Column="4"
-                Background="Black"
+                Background="DodgerBlue"
                 Foreground="White"
                 FontSize="25"
                 />
